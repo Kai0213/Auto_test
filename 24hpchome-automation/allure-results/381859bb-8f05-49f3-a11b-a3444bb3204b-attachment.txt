@@ -1,0 +1,384 @@
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1153, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [WinError 6] 控制代碼無效。
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Scripts\pytest.exe\__main__.py", line 7, in <module>
+    sys.exit(console_main())
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\config\__init__.py", line 201, in console_main
+    code = main()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\config\__init__.py", line 175, in main
+    ret: ExitCode | int = config.hook.pytest_cmdline_main(config=config)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 330, in pytest_cmdline_main
+    return wrap_session(config, _main)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 283, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 337, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 362, in pytest_runtestloop
+    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 113, in pytest_runtest_protocol
+    runtestprotocol(item, nextitem=nextitem)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 126, in runtestprotocol
+    rep = call_and_report(item, "setup", log)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 241, in call_and_report
+    call = CallInfo.from_call(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 341, in from_call
+    result: TResult | None = func()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 242, in <lambda>
+    lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 160, in pytest_runtest_setup
+    item.session._setupstate.setup(item)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 514, in setup
+    col.setup()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py", line 1630, in setup
+    self._request._fillfixtures()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\fixtures.py", line 697, in _fillfixtures
+    item.funcargs[argname] = self.getfixturevalue(argname)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\fixtures.py", line 532, in getfixturevalue
+    fixturedef = self._get_active_fixturedef(argname)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\fixtures.py", line 617, in _get_active_fixturedef
+    fixturedef.execute(request=subrequest)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\fixtures.py", line 1091, in execute
+    result = ihook.pytest_fixture_setup(fixturedef=self, request=request)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\fixtures.py", line 1140, in pytest_fixture_setup
+    result = call_fixture_func(fixturefunc, request, kwargs)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\fixtures.py", line 891, in call_fixture_func
+    fixture_result = next(generator)
+  File "C:\Users\user\Downloads\24hpchome-fe-test-automation-main\24hpchome-fe-test-automation-main\tests\test_homepage.py", line 14, in driver
+    service = Service(ChromeDriverManager().install())
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\webdriver_manager\chrome.py", line 23, in __init__
+    super().__init__(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\webdriver_manager\core\manager.py", line 25, in __init__
+    log("====== WebDriver manager ======")
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\webdriver_manager\core\logger.py", line 11, in log
+    __logger.log(wdm_log_level(), text)
+Message: '====== WebDriver manager ======'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1153, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [WinError 6] 控制代碼無效。
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Scripts\pytest.exe\__main__.py", line 7, in <module>
+    sys.exit(console_main())
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\config\__init__.py", line 201, in console_main
+    code = main()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\config\__init__.py", line 175, in main
+    ret: ExitCode | int = config.hook.pytest_cmdline_main(config=config)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 330, in pytest_cmdline_main
+    return wrap_session(config, _main)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 283, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 337, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 362, in pytest_runtestloop
+    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 113, in pytest_runtest_protocol
+    runtestprotocol(item, nextitem=nextitem)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 126, in runtestprotocol
+    rep = call_and_report(item, "setup", log)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 241, in call_and_report
+    call = CallInfo.from_call(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 341, in from_call
+    result: TResult | None = func()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 242, in <lambda>
+    lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 160, in pytest_runtest_setup
+    item.session._setupstate.setup(item)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 514, in setup
+    col.setup()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py", line 1630, in setup
+    self._request._fillfixtures()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\fixtures.py", line 697, in _fillfixtures
+    item.funcargs[argname] = self.getfixturevalue(argname)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\fixtures.py", line 532, in getfixturevalue
+    fixturedef = self._get_active_fixturedef(argname)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\fixtures.py", line 617, in _get_active_fixturedef
+    fixturedef.execute(request=subrequest)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\fixtures.py", line 1091, in execute
+    result = ihook.pytest_fixture_setup(fixturedef=self, request=request)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\fixtures.py", line 1140, in pytest_fixture_setup
+    result = call_fixture_func(fixturefunc, request, kwargs)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\fixtures.py", line 891, in call_fixture_func
+    fixture_result = next(generator)
+  File "C:\Users\user\Downloads\24hpchome-fe-test-automation-main\24hpchome-fe-test-automation-main\tests\test_homepage.py", line 14, in driver
+    service = Service(ChromeDriverManager().install())
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\webdriver_manager\chrome.py", line 40, in install
+    driver_path = self._get_driver_binary_path(self.driver)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\webdriver_manager\core\manager.py", line 35, in _get_driver_binary_path
+    binary_path = self._cache_manager.find_driver(driver)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\webdriver_manager\core\driver_cache.py", line 107, in find_driver
+    driver_version = self.get_cache_key_driver_version(driver)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\webdriver_manager\core\driver_cache.py", line 154, in get_cache_key_driver_version
+    return driver.get_driver_version_to_download()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\webdriver_manager\core\driver.py", line 48, in get_driver_version_to_download
+    return self.get_latest_release_version()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\webdriver_manager\drivers\chrome.py", line 56, in get_latest_release_version
+    log(f"Get LATEST {self._name} version for {self._browser_type}")
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\webdriver_manager\core\logger.py", line 11, in log
+    __logger.log(wdm_log_level(), text)
+Message: 'Get LATEST chromedriver version for google-chrome'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1153, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [WinError 6] 控制代碼無效。
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Scripts\pytest.exe\__main__.py", line 7, in <module>
+    sys.exit(console_main())
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\config\__init__.py", line 201, in console_main
+    code = main()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\config\__init__.py", line 175, in main
+    ret: ExitCode | int = config.hook.pytest_cmdline_main(config=config)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 330, in pytest_cmdline_main
+    return wrap_session(config, _main)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 283, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 337, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 362, in pytest_runtestloop
+    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 113, in pytest_runtest_protocol
+    runtestprotocol(item, nextitem=nextitem)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 126, in runtestprotocol
+    rep = call_and_report(item, "setup", log)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 241, in call_and_report
+    call = CallInfo.from_call(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 341, in from_call
+    result: TResult | None = func()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 242, in <lambda>
+    lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 160, in pytest_runtest_setup
+    item.session._setupstate.setup(item)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 514, in setup
+    col.setup()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py", line 1630, in setup
+    self._request._fillfixtures()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\fixtures.py", line 697, in _fillfixtures
+    item.funcargs[argname] = self.getfixturevalue(argname)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\fixtures.py", line 532, in getfixturevalue
+    fixturedef = self._get_active_fixturedef(argname)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\fixtures.py", line 617, in _get_active_fixturedef
+    fixturedef.execute(request=subrequest)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\fixtures.py", line 1091, in execute
+    result = ihook.pytest_fixture_setup(fixturedef=self, request=request)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\fixtures.py", line 1140, in pytest_fixture_setup
+    result = call_fixture_func(fixturefunc, request, kwargs)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\fixtures.py", line 891, in call_fixture_func
+    fixture_result = next(generator)
+  File "C:\Users\user\Downloads\24hpchome-fe-test-automation-main\24hpchome-fe-test-automation-main\tests\test_homepage.py", line 14, in driver
+    service = Service(ChromeDriverManager().install())
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\webdriver_manager\chrome.py", line 40, in install
+    driver_path = self._get_driver_binary_path(self.driver)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\webdriver_manager\core\manager.py", line 35, in _get_driver_binary_path
+    binary_path = self._cache_manager.find_driver(driver)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\webdriver_manager\core\driver_cache.py", line 110, in find_driver
+    key = self.__get_metadata_key(driver)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\webdriver_manager\core\driver_cache.py", line 144, in __get_metadata_key
+    driver_version = self.get_cache_key_driver_version(driver)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\webdriver_manager\core\driver_cache.py", line 154, in get_cache_key_driver_version
+    return driver.get_driver_version_to_download()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\webdriver_manager\core\driver.py", line 48, in get_driver_version_to_download
+    return self.get_latest_release_version()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\webdriver_manager\drivers\chrome.py", line 56, in get_latest_release_version
+    log(f"Get LATEST {self._name} version for {self._browser_type}")
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\webdriver_manager\core\logger.py", line 11, in log
+    __logger.log(wdm_log_level(), text)
+Message: 'Get LATEST chromedriver version for google-chrome'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1153, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [WinError 6] 控制代碼無效。
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Scripts\pytest.exe\__main__.py", line 7, in <module>
+    sys.exit(console_main())
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\config\__init__.py", line 201, in console_main
+    code = main()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\config\__init__.py", line 175, in main
+    ret: ExitCode | int = config.hook.pytest_cmdline_main(config=config)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 330, in pytest_cmdline_main
+    return wrap_session(config, _main)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 283, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 337, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 362, in pytest_runtestloop
+    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 113, in pytest_runtest_protocol
+    runtestprotocol(item, nextitem=nextitem)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 126, in runtestprotocol
+    rep = call_and_report(item, "setup", log)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 241, in call_and_report
+    call = CallInfo.from_call(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 341, in from_call
+    result: TResult | None = func()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 242, in <lambda>
+    lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 160, in pytest_runtest_setup
+    item.session._setupstate.setup(item)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 514, in setup
+    col.setup()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py", line 1630, in setup
+    self._request._fillfixtures()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\fixtures.py", line 697, in _fillfixtures
+    item.funcargs[argname] = self.getfixturevalue(argname)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\fixtures.py", line 532, in getfixturevalue
+    fixturedef = self._get_active_fixturedef(argname)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\fixtures.py", line 617, in _get_active_fixturedef
+    fixturedef.execute(request=subrequest)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\fixtures.py", line 1091, in execute
+    result = ihook.pytest_fixture_setup(fixturedef=self, request=request)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\fixtures.py", line 1140, in pytest_fixture_setup
+    result = call_fixture_func(fixturefunc, request, kwargs)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\fixtures.py", line 891, in call_fixture_func
+    fixture_result = next(generator)
+  File "C:\Users\user\Downloads\24hpchome-fe-test-automation-main\24hpchome-fe-test-automation-main\tests\test_homepage.py", line 14, in driver
+    service = Service(ChromeDriverManager().install())
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\webdriver_manager\chrome.py", line 40, in install
+    driver_path = self._get_driver_binary_path(self.driver)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\webdriver_manager\core\manager.py", line 35, in _get_driver_binary_path
+    binary_path = self._cache_manager.find_driver(driver)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\webdriver_manager\core\driver_cache.py", line 125, in find_driver
+    log(f"Driver [{path}] found in cache")
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\webdriver_manager\core\logger.py", line 11, in log
+    __logger.log(wdm_log_level(), text)
+Message: 'Driver [C:\\Users\\user\\.wdm\\drivers\\chromedriver\\win64\\132.0.6834.83\\chromedriver-win32/chromedriver.exe] found in cache'
+Arguments: ()
